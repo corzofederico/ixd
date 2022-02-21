@@ -1,0 +1,31 @@
+#users{
+	width:100%;
+	color:rgb(var(--000));
+	display: grid;
+    grid-gap: 10px;
+    grid-template-columns:repeat(3,1fr);
+}
+@media screen and (max-width:950px){#users{grid-template-columns:repeat(2,1fr);}}
+@media screen and (max-width:650px){#users{grid-template-columns:repeat(1,1fr);}}
+
+#users > div{
+	width:100%;
+	display:flex;
+    align-items: center;
+    padding: 10px;
+	border-radius:15px;
+	background-color:rgb(var(--f9f9f9));
+}
+#users > div > .photo{
+	width:3rem;
+	height:3rem;
+	border-radius:10px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+#users > div > .name{
+	padding-left: 10px;
+	font-size:16px;
+}
+#users > div > button{color:#fff;}

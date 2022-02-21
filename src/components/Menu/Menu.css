@@ -1,0 +1,134 @@
+#menu-left,#cont,#btn_menu{-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;transition:all 1s ease;}
+#btn_menu{
+	position:fixed;
+    top: 20px;
+    left: 20px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+	z-index:6;
+	cursor:pointer;
+	font-size:20px;
+	background-color:rgb(var(--fff));
+    box-shadow: 0 0 10px 5px rgba(var(--555),0.1);
+}
+#btn_menu.fa-bars:hover{background-color:rgb(var(--eee));}
+#btn_menu.fa-times{
+	left:calc(18rem + (20px*2));
+}
+@media (max-width:305px){
+	#menu-left{
+		width:calc(100% - 20px) !important;
+		right:10px;
+	}
+	#btn_menu.fa-times{
+		left:auto;
+		right:10px;
+	}
+}
+
+#menu-left{
+	position:fixed;
+	top:20px;
+	left:20px;
+	z-index:5;
+	display: grid;
+    gap: 10px;
+    align-items: center;
+	width:calc(18rem - (20px*2));
+	padding:20px;
+	overflow:auto;
+	border-radius:10px;
+	background-color:rgb(var(--fff));
+	box-shadow: 0 0 10px 5px rgba(var(--555),0.1);
+}
+#menu-left.closed{left:-18rem;}
+#menu-left.opened ~ #cont{opacity:0.5;overflow:hidden;}
+#menu-left.opened ~ #cont > *{pointer-events:none;}
+
+#menu-left > div{
+	cursor:pointer;
+    border-radius: 10px;
+}
+#menu-left > div[data]{
+    padding:15px 20px;
+	font-weight:600;
+	fill:var(--000);
+    display: flex;
+    align-items: center;
+	gap: 10px;
+}
+#menu-left > div[data]:hover{background-color:rgba(var(--color),0.2) !important;}
+#menu-left > div.active[data]{
+    cursor:default;
+	color:rgb(var(--color));
+	fill:var(--color);
+	background-color:rgba(var(--color),0.1) !important;
+}
+
+#menu-left > div > i,#menu-left > div > svg{font-size:20px;}
+#menu-left > div > b {
+    flex-grow: 1;
+}
+#menu-left > div > i.new{
+	font-size:17px !important;
+}
+
+#menu-left > div[data="en_casa"]{--color:var(--blue);}
+#menu-left > div[data="users"]{--color:var(--red);}
+#menu-left > div[data="chats"]{--color:var(--orange);}
+#menu-left > div[data="projs"]{--color:var(--violet);}
+#menu-left > div[data="school"]{--color:var(--green);}
+#menu-left > div[data="my_user"]{--color:17, 17, 17;}
+#menu-left > div[data="my_user"] > .img{
+	display:inline-block;
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	width:25px;
+	height:25px;
+	border-radius:100%;
+}
+
+@media (orientation:portrait){
+	#cont{
+		padding:20px 30px;
+		width:calc(100% - 30px*2);
+		padding-bottom: 95px;
+		left:0 !important;
+		right:0 !important;
+		top:0 !important;
+		opacity:1 !important;
+		overflow:auto !important;
+		bottom:0 !important;
+		padding-bottom: 95px;
+	}
+	#btn_menu,#menu-left .sign,#menu-left > div > b{display:none !important;}
+	#menu-left{
+		display: flex;
+		background-color:rgb(var(--f5f5f5));
+		bottom:0;
+		top:auto;
+		left:0 !important;
+		right:0;
+		border-radius:0;
+		width:auto;
+	}
+	#menu-left > div{
+		justify-content: center;
+		width: 100%;
+	}
+	#menu-left > div[data="my_user"] > .img{float:none !important;top:-3px !important;}
+}
+
+.sign {
+    background-color: #F5DFF1 !important;
+    color: #000;
+    font-weight:600;
+	padding:15.5px 35px;
+	display:inline-block;
+	text-align:center;
+}

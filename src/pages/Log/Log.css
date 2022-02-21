@@ -1,0 +1,7 @@
+form{
+    display:grid;
+    justify-items:center;
+    grid-gap:20px;
+    width: 80%;
+    margin: 40px auto;
+}

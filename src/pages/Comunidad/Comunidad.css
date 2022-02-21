@@ -1,0 +1,71 @@
+.form_search{
+    display:inline-block;
+    width:100%;
+    padding:5px 0;
+    position:sticky;
+    top:calc(-60px + 5px);
+    background-color:rgb(var(--fff));
+}
+.form_search > input{
+    height:calc(50px - 4px);
+    max-width:100%;
+    width:calc(100% - 100px) !important;
+    border-radius:15px;
+    padding:2px 20px;
+    background-color:rgb(var(--f9f9f9));
+    margin:0;
+    float:left;
+}
+.form_search > button{
+    padding:16px !important;
+    background-color:rgb(var(--f9f9f9)) !important;
+    border-radius:15px !important;
+    color:rgb(var(--000));
+    float:left;
+    margin:0;
+    margin-left:10px;
+    font-size:18px;
+}
+#users{
+    margin-top:2rem;
+}
+@media screen and (max-width:650px){
+    h1{
+        font-size:3em;
+        padding:50px 0;
+    } 
+}
+@media screen and (max-width:470px){
+    h1{
+        font-size:2.5em;
+    }
+    .form_search > input{
+        height:calc(40px - 4px) !important;
+        padding:2px 15px;
+        border-radius:10px !important;
+        width:calc(100% - 75px) !important;
+    }
+    .form_search > button{
+        padding:13px !important;
+        margin-left:5px;
+        font-size:14px !important;
+        border-radius:10px !important;
+    }
+    #users > div > #name{
+        padding:23px 10px;
+        font-size:18px;
+    }
+}
+@media screen and (max-width:360px){
+    h1{
+        font-size:2em;
+    }
+}
+
+.advisment{
+    margin:50px 0;
+}
+.advisment > img{
+    width:700px;
+    max-width:100%;
+}

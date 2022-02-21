@@ -1,0 +1,29 @@
+.profile{
+    --size: 150px;
+    display: grid;
+    grid-template-columns: var(--size) 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: start;
+    justify-content: start;
+    grid-gap: 20px;
+    margin-bottom:20px;
+}
+.profile > img{
+    width:var(--size);
+    height:var(--size);
+    object-fit: cover;
+    border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.profile > .name{
+    margin:auto 0;
+    grid-column: 2;
+    grid-row: 1;
+}
+@media (max-width:790px){
+    .profile > .desc{
+        grid-column-start: 1;
+        grid-column-end: none;
+    }
+}

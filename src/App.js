@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { Route, Switch } from "wouter";
+import 'App.css';
+import { UserContextProvider } from "userContext";
 
-function App() {
+import Menu from 'components/Menu';
+import Comunidad from 'pages/Comunidad';
+import Log from 'pages/Log';
+import Profile from 'pages/Profile';
+//import Proyectos from 'pages/Proyectos';
+
+const HomePage = React.lazy(() => import("pages/Home"));
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContextProvider>
+        <Menu />
+        <div id="cont">
+          <Suspense fallback={<b>Loading...</b>}>
+            <Switch>
+              <Route component={HomePage} path="/" />
+              <Route component={Log} path="/log/:type" />
+              <Route component={Comunidad} path="/comunidad/:search?" />
+              <Route component={Profile} path="/user/:usr" />
+              <Route component={Profile} path="/project/:proj" />
+              <Route>404, Not Found!</Route>
+            </Switch>
+          </Suspense>
+        </div>
+    </UserContextProvider>
   );
 }
-
-export default App;
