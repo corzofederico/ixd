@@ -1,6 +1,6 @@
 {
   "name": "ixd",
-  "homepage":".",
+  "homepage":"https://ixdbb.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
