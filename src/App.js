@@ -1,12 +1,11 @@
 import React, { Suspense } from "react";
-import { Route, Switch } from "wouter";
 import 'App.css';
 import { UserContextProvider } from "userContext";
 
 import Menu from 'components/Menu';
-import Comunidad from 'pages/Comunidad';
+/*import Comunidad from 'pages/Comunidad';
 import Log from 'pages/Log';
-import Profile from 'pages/Profile';
+import Profile from 'pages/Profile';*/
 //import Proyectos from 'pages/Proyectos';
 
 const HomePage = React.lazy(() => import("pages/Home"));
