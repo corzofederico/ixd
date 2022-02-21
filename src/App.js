@@ -7,8 +7,9 @@ import Menu from 'components/Menu';
 import Log from 'pages/Log';
 import Profile from 'pages/Profile';*/
 //import Proyectos from 'pages/Proyectos';
+import HomePage from 'pages/Home';
 
-const HomePage = React.lazy(() => import("pages/Home"));
+//const HomePage = React.lazy(() => import("pages/Home"));
 
 export default function App() {
   return (
