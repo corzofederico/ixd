@@ -17,14 +17,15 @@ export default function App() {
         <Menu />
         <div id="cont">
           <Suspense fallback={<b>Loading...</b>}>
-            <Switch>
+            HomePage
+            {/*<Switch>
               <Route component={HomePage} path="/" />
               <Route component={Log} path="/log/:type" />
               <Route component={Comunidad} path="/comunidad/:search?" />
               <Route component={Profile} path="/user/:usr" />
               <Route component={Profile} path="/project/:proj" />
               <Route>404, Not Found!</Route>
-            </Switch>
+            </Switch>*/}
           </Suspense>
         </div>
     </UserContextProvider>
