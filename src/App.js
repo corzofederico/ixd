@@ -17,7 +17,7 @@ export default function App() {
         <Menu />
         <div id="cont">
           <Suspense fallback={<b>Loading...</b>}>
-            HomePage
+            <HomePage/>
             {/*<Switch>
               <Route component={HomePage} path="/" />
               <Route component={Log} path="/log/:type" />
